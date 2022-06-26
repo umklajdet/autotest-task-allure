@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+
+# Folders ignore
+../target/
+.idea/
+.allure/
+
+# Files ignore
