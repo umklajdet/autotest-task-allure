@@ -26,6 +26,7 @@
         <allure-junit4>2.17.3</allure-junit4>
         <allure-java-commons>2.18.1</allure-java-commons>
         <aspectj.version>1.9.5</aspectj.version>
+        <slf4j-simple>1.7.30</slf4j-simple>
 
     </properties>
 
@@ -56,6 +57,15 @@
             <artifactId>allure-java-commons</artifactId>
             <version>${allure-java-commons}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j-simple}</version>
+<!--            <scope>test</scope>-->
+        </dependency>
+
 
     </dependencies>
 
@@ -107,7 +117,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
-                        <version>1.9.5</version>
+                        <version>${aspectj.version}</version>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>

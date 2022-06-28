@@ -15,7 +15,7 @@ public class DriverManager {
     }
 
     // инициализация DriverManager
-    public static DriverManager getDriverManger() {
+    public static DriverManager getDriverManager() {
         if (INSTANCE == null) {
             INSTANCE = new DriverManager();
         }
@@ -23,14 +23,14 @@ public class DriverManager {
     }
 
     // инициализация веб-драйвера
-    public WebDriver getDriver(){
-        if(driver == null){
+    public WebDriver getDriver() {
+        if (driver == null) {
             initDriver();
         }
         return driver;
     }
 
-    private void initDriver(){
+    private void initDriver() {
         System.setProperty("webdriver.chrome.driver", propManager.getProperty("path.chrome.driver.windows"));
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Long.parseLong(propManager.getProperty("implicitly.wait")), TimeUnit.SECONDS);
@@ -38,8 +38,8 @@ public class DriverManager {
         driver.manage().window().maximize();
     }
 
-    public void quitDriver(){
-        if(driver != null){
+    public void quitDriver() {
+        if (driver != null) {
             driver.quit();
             driver = null;
         }

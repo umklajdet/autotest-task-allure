@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    protected DriverManager driverManager = DriverManager.getDriverManger();
+    protected DriverManager driverManager = DriverManager.getDriverManager();
     protected Wait<WebDriver> wait = new WebDriverWait(driverManager.getDriver(), 5, 1000);
     protected PageManager pageManager = PageManager.getPageManager();
 

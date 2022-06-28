@@ -1,5 +1,4 @@
 import io.qameta.allure.junit4.DisplayName;
-import jdk.jfr.Name;
 import org.junit.Test;
 
 public class NewBusinessTripTest extends BaseTests {

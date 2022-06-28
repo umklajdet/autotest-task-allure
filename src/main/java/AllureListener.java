@@ -7,7 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 public class AllureListener extends AllureJunit4 {
     @Override
     public void testFailure(Failure failure) {
-        byte[] byteScreenshot = ((TakesScreenshot) DriverManager.getDriverManger().getDriver()).getScreenshotAs(OutputType.BYTES);
+        byte[] byteScreenshot = ((TakesScreenshot) DriverManager.getDriverManager().getDriver()).getScreenshotAs(OutputType.BYTES);
         getLifecycle().addAttachment("failureScreenshot", "image/png", "png", byteScreenshot);
         super.testFailure(failure);
     }
